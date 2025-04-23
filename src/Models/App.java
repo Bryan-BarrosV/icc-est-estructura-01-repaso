@@ -20,20 +20,19 @@ public class App {
             new Persona("Elena", 26),
         };
 
-        // Instanciando las clases necesarias
+       
         PersonaController pC = new PersonaController();
         ViewsConsole vC = new ViewsConsole();
 
-        // Imprimir arreglo original
+        
         vC.printMessage("Personas", true);
         vC.printPersonaArray(personas);
 
-        // Ordenar arreglo por edad
+        
         vC.printMessage("Personas Ordenadas por edad", true);
         pC.ordenarPorEdad(personas);
         vC.printPersonaArray(personas);
 
-        // Buscar persona con edad 40
         vC.printMessage("Buscar persona  con una edad de 40", true);
         Persona pB = pC.buscarPorEdad(personas, 40);
         if (pB == null) {
@@ -41,8 +40,7 @@ public class App {
         } else {
             vC.printMessage("\tSe encontró: " + pB.getNombre() + ", edad: " + pB.getEdad(), false);
         }
-
-        // Buscar persona con edad 99
+        
         vC.printMessage("Buscar persona  con una edad de 99", true);
         Persona pC99 = pC.buscarPorEdad(personas, 99);
         if (pC99 == null) {
